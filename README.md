@@ -21,10 +21,11 @@ Install via <a href="https://www.nuget.org/packages/EventExtensions/">NuGet</a>.
         public async void Run() {
             MyEvent += SimpleHandler;
             var results = await MyEvent.CollectAsync(8);
-            Console.WriteLine(results[0]);
+            foreach (var result in results)
+                Console.WriteLine(result);
         }
         
-        private async Task SimpleHandler(int num)
+        private async Task<int> SimpleHandler(int num)
         {
             await Task.Delay(TimeSpan.FromSeconds(1));
             return num * 2;
