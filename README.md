@@ -1,13 +1,18 @@
 # EventExtensions
-This .NET Standard package adds a few must-have extension methods to events.
+This multi-target package adds a few must-have extension methods to events.
 
 - Collect the returned values of event handlers synchronously or asynchronously.
 - Invoke an event asynchronously.
+- Throws no NULL pointer exception and checks for NULL events within the extension methods.
+
+### Targets
+- .NET Standard 2.0 or higher
+- .NET Framework 4.5 or higher
 
 ## Installation
 Install via <a href="https://www.nuget.org/packages/EventExtensions/">NuGet</a>.
 
-    Install-Package EventExtensions -Version 1.0.0
+    Install-Package EventExtensions -Version 2.0.0
 
 ## Getting Started
 
