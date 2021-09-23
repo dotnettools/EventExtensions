@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EventExtensions
 {
+    /// <summary>
+    /// Provides extension methods for delegates.
+    /// </summary>
     public static class EventsExtensions
     {
         /// <summary>
