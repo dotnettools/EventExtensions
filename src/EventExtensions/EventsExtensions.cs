@@ -31,7 +31,11 @@ namespace EventExtensions
         public static object[] Collect(this Delegate @delegate, params object[] @params)
         {
             if (@delegate == null)
+#if NETSTANDARD2_0_OR_GREATER
                 return Array.Empty<object>();
+#else
+                return new object[0];
+#endif
 
             var invocationList = @delegate.GetInvocationList();
             var results = new object[invocationList.Length];
