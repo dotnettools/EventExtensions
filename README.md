@@ -12,7 +12,7 @@ This multi-target package adds a few must-have extension methods to events.
 ## Installation
 Install via <a href="https://www.nuget.org/packages/EventExtensions/">NuGet</a>.
 
-    Install-Package EventExtensions -Version 2.0.0
+    Install-Package EventExtensions -Version 2.0.1
 
 ## Getting Started
 
