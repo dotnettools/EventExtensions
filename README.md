@@ -3,7 +3,7 @@ This multi-target package adds a few must-have extension methods to events.
 
 - Collect the returned values of event handlers synchronously or asynchronously.
 - Invoke an event asynchronously.
-- Handles NULL events; since it checks for NULL events within the extension methods and thus throws no NULL pointer exceptions.
+- Handles NULL events; since it checks for null values inside the extension methods and thus throws no null-pointer exceptions.
 
 ### Targets
 - .NET Standard 2.0 or higher
