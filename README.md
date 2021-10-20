@@ -1,5 +1,5 @@
 # EventExtensions
-This multi-target package adds a few must-have extension methods to events.
+This package adds a few must-have extension methods to events.
 
 - Collect the returned values of event handlers synchronously or asynchronously.
 - Invoke an event asynchronously.
