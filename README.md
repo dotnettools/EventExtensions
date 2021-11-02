@@ -16,27 +16,29 @@ Install via <a href="https://www.nuget.org/packages/EventExtensions/">NuGet</a>.
 
 ## Getting Started
 
-    using EventExtensions;
-    using System;
-    
-    public class Program
-    {
-        public event Func<int, Task<int>> MyEvent;
-        
-        public async void Run() {
-            MyEvent += SimpleHandler;
-            var results = await MyEvent.CollectAsync(8);
-            foreach (var result in results)
-                Console.WriteLine(result);
-        }
-        
-        private async Task<int> SimpleHandler(int num)
-        {
-            await Task.Delay(TimeSpan.FromSeconds(1));
-            return num * 2;
-        }
-    
-        public static void Main(string[] args) {
-            new Program().Run();
-        }
+```csharp
+using EventExtensions;
+using System;
+
+public class Program
+{
+    public event Func<int, Task<int>> MyEvent;
+
+    public async void Run() {
+        MyEvent += SimpleHandler;
+        var results = await MyEvent.CollectAsync(8);
+        foreach (var result in results)
+            Console.WriteLine(result);
     }
+
+    private async Task<int> SimpleHandler(int num)
+    {
+        await Task.Delay(TimeSpan.FromSeconds(1));
+        return num * 2;
+    }
+
+    public static void Main(string[] args) {
+        new Program().Run();
+    }
+}
+```
