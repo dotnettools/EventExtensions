@@ -24,7 +24,7 @@ public class Program
 {
     public event Func<int, Task<int>> MyEvent;
 
-    public async void Run() {
+    public async Task Run() {
         MyEvent += SimpleHandler;
         var results = await MyEvent.CollectAsync(8);
         foreach (var result in results)
@@ -37,8 +37,8 @@ public class Program
         return num * 2;
     }
 
-    public static void Main(string[] args) {
-        new Program().Run();
+    public static Task Main(string[] args) {
+        return new Program().Run();
     }
 }
 ```
