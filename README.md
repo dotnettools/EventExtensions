@@ -26,7 +26,7 @@ public class Program
 
     public async Task Run() {
         MyEvent += SimpleHandler;
-        var results = await MyEvent.CollectAsync(8);
+        var results = await MyEvent.CollectAsync(8); // There are other flavors to this method such as 'InvokeAsync'
         foreach (var result in results)
             Console.WriteLine(result);
     }
