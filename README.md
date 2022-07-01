@@ -5,14 +5,16 @@ This library adds a few must-have extension methods to events.
 - Invoke an event asynchronously.
 - Handles NULL events; since it checks for null values inside the extension methods and thus throws no null-pointer exceptions.
 
-### Targets
-- .NET Standard 2.0 or higher
-- .NET Framework 4.5 or higher
+## What is exactly added?
+- `InvokeAsync` to simply invoke async events
+- `Collect` to collect the returned values by invoking synchronous events
+- `CollectAsync` to invoke async events and collect the returned values
+- `AsyncEventHandler` and `AsyncEventHandler<T>` as the asynchronous versions of `EventHandler` and `EventHandler<T>`
 
 ## Installation
 Install via <a href="https://www.nuget.org/packages/EventExtensions/">NuGet</a>.
 
-    Install-Package EventExtensions -Version 2.0.1
+    Install-Package EventExtensions -Version 2.2.0
 
 ## Getting Started
 
