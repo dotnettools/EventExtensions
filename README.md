@@ -1,5 +1,5 @@
 # EventExtensions
-This library adds a few must-have extension methods to events.
+This library adds a few extension methods to events. While it's not the best practice to have async events, this library attempts to provide the following features:
 
 - Collect the returned values of event handlers synchronously or asynchronously.
 - Invoke an event asynchronously.
