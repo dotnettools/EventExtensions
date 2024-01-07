@@ -1,5 +1,5 @@
 # EventExtensions
-This library adds a few extension methods to events. While it's not the best practice to have async events, this library attempts to provide the following features:
+This library adds a few extension methods to events. While it's not best practice to have async events, this library attempts to provide the following features:
 
 - Collect the returned values of event handlers synchronously or asynchronously.
 - Invoke an event asynchronously.
@@ -28,7 +28,7 @@ public class Program
 
     public async Task Run() {
         MyEvent += SimpleHandler;
-        var results = await MyEvent.CollectAsync(8); // There are other flavors to this method such as 'InvokeAsync'
+        var results = await MyEvent.CollectAsync(8); // There are other flavors to this method such as 'InvokeAsync'!
         foreach (var result in results)
             Console.WriteLine(result);
     }
